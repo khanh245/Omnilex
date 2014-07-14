@@ -46,37 +46,37 @@ IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'LatinAlp
   DROP TABLE LatinAlphabet;
 CREATE TABLE LatinAlphabet (
   Alpha_ID   int IDENTITY(1,1),
-  character  varchar(5) NOT NULL,
+  Letter  varchar(5) NOT NULL,
   CONSTRAINT [PK_AlphaID] PRIMARY KEY (Alpha_ID ASC),
-  CONSTRAINT [CHK_Char] CHECK (DATALENGTH(Character) > 0)
+  CONSTRAINT [CHK_Char] CHECK (DATALENGTH(Letter) > 0)
 );
 
-INSERT INTO LatinAlphabet (Character) VALUES ('A');
-INSERT INTO LatinAlphabet (Character) VALUES ('B');
-INSERT INTO LatinAlphabet (Character) VALUES ('C');
-INSERT INTO LatinAlphabet (Character) VALUES ('D');
-INSERT INTO LatinAlphabet (Character) VALUES ('E');
-INSERT INTO LatinAlphabet (Character) VALUES ('F');
-INSERT INTO LatinAlphabet (Character) VALUES ('G');
-INSERT INTO LatinAlphabet (Character) VALUES ('H');
-INSERT INTO LatinAlphabet (Character) VALUES ('I');
-INSERT INTO LatinAlphabet (Character) VALUES ('J');
-INSERT INTO LatinAlphabet (Character) VALUES ('K');
-INSERT INTO LatinAlphabet (Character) VALUES ('L');
-INSERT INTO LatinAlphabet (Character) VALUES ('M');
-INSERT INTO LatinAlphabet (Character) VALUES ('N');
-INSERT INTO LatinAlphabet (Character) VALUES ('O');
-INSERT INTO LatinAlphabet (Character) VALUES ('P');
-INSERT INTO LatinAlphabet (Character) VALUES ('Q');
-INSERT INTO LatinAlphabet (Character) VALUES ('R');
-INSERT INTO LatinAlphabet (Character) VALUES ('S');
-INSERT INTO LatinAlphabet (Character) VALUES ('T');
-INSERT INTO LatinAlphabet (Character) VALUES ('U');
-INSERT INTO LatinAlphabet (Character) VALUES ('V');
-INSERT INTO LatinAlphabet (Character) VALUES ('W');
-INSERT INTO LatinAlphabet (Character) VALUES ('X');
-INSERT INTO LatinAlphabet (Character) VALUES ('Y');
-INSERT INTO LatinAlphabet (Character) VALUES ('Z');
+INSERT INTO LatinAlphabet (Letter) VALUES ('A');
+INSERT INTO LatinAlphabet (Letter) VALUES ('B');
+INSERT INTO LatinAlphabet (Letter) VALUES ('C');
+INSERT INTO LatinAlphabet (Letter) VALUES ('D');
+INSERT INTO LatinAlphabet (Letter) VALUES ('E');
+INSERT INTO LatinAlphabet (Letter) VALUES ('F');
+INSERT INTO LatinAlphabet (Letter) VALUES ('G');
+INSERT INTO LatinAlphabet (Letter) VALUES ('H');
+INSERT INTO LatinAlphabet (Letter) VALUES ('I');
+INSERT INTO LatinAlphabet (Letter) VALUES ('J');
+INSERT INTO LatinAlphabet (Letter) VALUES ('K');
+INSERT INTO LatinAlphabet (Letter) VALUES ('L');
+INSERT INTO LatinAlphabet (Letter) VALUES ('M');
+INSERT INTO LatinAlphabet (Letter) VALUES ('N');
+INSERT INTO LatinAlphabet (Letter) VALUES ('O');
+INSERT INTO LatinAlphabet (Letter) VALUES ('P');
+INSERT INTO LatinAlphabet (Letter) VALUES ('Q');
+INSERT INTO LatinAlphabet (Letter) VALUES ('R');
+INSERT INTO LatinAlphabet (Letter) VALUES ('S');
+INSERT INTO LatinAlphabet (Letter) VALUES ('T');
+INSERT INTO LatinAlphabet (Letter) VALUES ('U');
+INSERT INTO LatinAlphabet (Letter) VALUES ('V');
+INSERT INTO LatinAlphabet (Letter) VALUES ('W');
+INSERT INTO LatinAlphabet (Letter) VALUES ('X');
+INSERT INTO LatinAlphabet (Letter) VALUES ('Y');
+INSERT INTO LatinAlphabet (Letter) VALUES ('Z');
 
 /********************************************************************************
                             LANGUAGE ALPHABET RELATION
