@@ -87,8 +87,8 @@ IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'Language
   DROP TABLE LanguageAlphabet;
 CREATE TABLE LanguageAlphabet (
   LangAlpha_ID   int IDENTITY(1,1),
-  Lang           int NOT NULL,
-  Alphabet       int UNIQUE NOT NULL,
+  Lang           int UNIQUE NOT NULL,
+  Alphabet       int NOT NULL,
   CONSTRAINT [PK_LangAlphaID] PRIMARY KEY (LangAlpha_ID ASC),
   /* TODO: Add a check constraint for joint relation */
 );
