@@ -46,7 +46,7 @@ IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'LatinAlp
   DROP TABLE LatinAlphabet;
 CREATE TABLE LatinAlphabet (
   Alpha_ID   int IDENTITY(1,1),
-  Character  varchar(5) NOT NULL,
+  character  varchar(5) NOT NULL,
   CONSTRAINT [PK_AlphaID] PRIMARY KEY (Alpha_ID ASC),
   CONSTRAINT [CHK_Char] CHECK (DATALENGTH(Character) > 0)
 );
