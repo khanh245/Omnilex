@@ -77,3 +77,18 @@ INSERT INTO LatinAlphabet (Character) VALUES ('W');
 INSERT INTO LatinAlphabet (Character) VALUES ('X');
 INSERT INTO LatinAlphabet (Character) VALUES ('Y');
 INSERT INTO LatinAlphabet (Character) VALUES ('Z');
+
+/********************************************************************************
+                            LANGUAGE ALPHABET RELATION
+*********************************************************************************/
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_LangAlphaID') 
+  ALTER TABLE LanguageAlphabet DROP CONSTRAINT [PK_LangAlphaID];
+IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'LanguageAlphabet') 
+  DROP TABLE LanguageAlphabet;
+CREATE TABLE LanguageAlphabet (
+  LangAlpha_ID   int IDENTITY(1,1),
+  Lang           int NOT NULL,
+  Alphabet       int UNIQUE NOT NULL,
+  CONSTRAINT [PK_LangAlphaID] PRIMARY KEY (LangAlpha_ID ASC),
+  /* TODO: Add a check constraint for joint relation */
+);
