@@ -117,4 +117,7 @@ CREATE TABLE LanguageAlphabet (
 );
 
 INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (1, 1);
+INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (2, 1);
+INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (3, 1);
 INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (4, 2);
+INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (5, 1);
