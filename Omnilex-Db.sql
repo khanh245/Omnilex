@@ -1,4 +1,4 @@
-/********************************************************************************
+﻿/********************************************************************************
         GENERAL PURPOSE SCRIPTS - SETTING UP ENVIRONMENT
 *********************************************************************************/
 SET NOCOUNT ON;
@@ -25,7 +25,7 @@ IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'LatinAlp
   DROP TABLE LatinAlphabet;
 CREATE TABLE LatinAlphabet (
   Alpha_ID   int IDENTITY(1,1),
-  Letter  varchar(5) NOT NULL,
+  Letter  nvarchar(5) NOT NULL,
   CONSTRAINT [PK_AlphaID] PRIMARY KEY (Alpha_ID ASC),
   CONSTRAINT [CHK_Char] CHECK (DATALENGTH(Letter) > 0)
 );
@@ -56,6 +56,52 @@ INSERT INTO LatinAlphabet (Letter) VALUES ('W');
 INSERT INTO LatinAlphabet (Letter) VALUES ('X');
 INSERT INTO LatinAlphabet (Letter) VALUES ('Y');
 INSERT INTO LatinAlphabet (Letter) VALUES ('Z');
+
+/********************************************************************************
+                            CYRILLIC ALPHABET RELATION
+*********************************************************************************/
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_CyrAlphaID') 
+  ALTER TABLE CyrillicAlphabet DROP CONSTRAINT [PK_CyrAlphaID];
+IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'CyrillicAlphabet') 
+  DROP TABLE CyrillicAlphabet;
+CREATE TABLE CyrillicAlphabet (
+  Alpha_ID   int IDENTITY(1,1),
+  Letter  nvarchar(5) NOT NULL,
+  CONSTRAINT [PK_CyrAlphaID] PRIMARY KEY (Alpha_ID ASC),
+  CONSTRAINT [CHK_CyrChar] CHECK (DATALENGTH(Letter) > 0)
+);
+
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'А');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Б');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'В');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Г');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Д');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Е');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ё');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ж');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'З');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'И');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Й');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'К');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Л');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'М');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Н');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'О');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'П');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Р');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'С');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Т');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'У');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ф');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Х');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ц');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ч');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ш');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Щ');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ы');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Э');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Ю');
+INSERT INTO CyrillicAlphabet (Letter) VALUES (N'Я');
 
 /********************************************************************************
                             LANGUAGES RELATION
