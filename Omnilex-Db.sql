@@ -7,13 +7,13 @@ GO
 USE master;
 GO
 
-IF EXISTS (SELECT * FROM sysdatabases WHERE name = N'OmniLexDb') 
-  DROP DATABASE OmniLexDb;
-IF NOT EXISTS (SELECT * FROM sysdatabases WHERE name = N'OmniLexDb') 
-  CREATE DATABASE [OmniLexDb];
+IF EXISTS (SELECT * FROM sysdatabases WHERE name = N'OmnilexDb') 
+  DROP DATABASE OmnilexDb;
+IF NOT EXISTS (SELECT * FROM sysdatabases WHERE name = N'OmnilexDb') 
+  CREATE DATABASE [OmnilexDb];
 GO
 
-USE [OmniLexDb];
+USE [OmnilexDb];
 GO
 
 /********************************************************************************
