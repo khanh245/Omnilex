@@ -1,4 +1,12 @@
-﻿/********************************************************************************
+﻿/**********************************************
+***********************************************
+***********************************************
+*** FILE: Omnilex Database SQL SERVER QUERY ***
+***********************************************
+***********************************************
+***********************************************/
+
+/********************************************************************************
         GENERAL PURPOSE SCRIPTS - SETTING UP ENVIRONMENT
 *********************************************************************************/
 SET NOCOUNT ON;
@@ -7,13 +15,13 @@ GO
 USE master;
 GO
 
-IF EXISTS (SELECT * FROM sysdatabases WHERE name = N'OmnilexDb') 
-  DROP DATABASE OmnilexDb;
-IF NOT EXISTS (SELECT * FROM sysdatabases WHERE name = N'OmnilexDb') 
-  CREATE DATABASE [OmnilexDb];
+IF EXISTS (SELECT * FROM sysdatabases WHERE name = N'omnilex_db') 
+  DROP DATABASE omnilex_db;
+IF NOT EXISTS (SELECT * FROM sysdatabases WHERE name = N'omnilex_db') 
+  CREATE DATABASE [omnilex_db];
 GO
 
-USE [OmnilexDb];
+USE [omnilex_db];
 GO
 
 /********************************************************************************
