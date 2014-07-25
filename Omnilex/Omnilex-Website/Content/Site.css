@@ -19,3 +19,7 @@ textarea {
 .search-input {
     max-width: 100%;
 }
+
+.btn-search {
+    width: 150px;
+}
