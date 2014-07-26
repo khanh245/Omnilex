@@ -1,20 +1,26 @@
 ﻿/* Override body layout */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
+html, body, .container {
     height: 100%;
 }
 
-.carousel, .item, .active {
-    height: 100%;
+.container {
+    display: table;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-bottom: 25px;
 }
 
-.carousel-inner {
-    height: 100%;
+.main-container {
+    padding-top: 0px;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* Override navbar background */
@@ -26,11 +32,6 @@ html, body {
     .navbar li {
         color: #000;
     }
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    font-family: 'Roboto', sans-serif;
-}
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
