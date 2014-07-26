@@ -35,13 +35,7 @@
             </div>
         </div>
 
-        <div class="body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p class="text-center">&copy; @DateTime.Now.Year - Omnilex</p>
-            </footer>
-        </div>
+        @RenderBody()
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/typeahead")
