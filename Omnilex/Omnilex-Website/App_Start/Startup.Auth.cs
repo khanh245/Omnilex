@@ -7,9 +7,9 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using System;
-using Omnilex_Website.Models;
+using OmnilexWebsite.Models;
 
-namespace Omnilex_Website
+namespace OmnilexWebsite
 {
     public partial class Startup
     {

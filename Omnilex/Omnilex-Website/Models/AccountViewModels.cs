@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Omnilex_Website.Models
+namespace OmnilexWebsite.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

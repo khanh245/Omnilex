@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(Omnilex_Website.Startup))]
-namespace Omnilex_Website
+[assembly: OwinStartupAttribute(typeof(OmnilexWebsite.Startup))]
+namespace OmnilexWebsite
 {
     public partial class Startup
     {

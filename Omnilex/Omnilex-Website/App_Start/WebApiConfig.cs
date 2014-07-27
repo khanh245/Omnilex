@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace Omnilex_Website
+namespace OmnilexWebsite
 {
     public static class WebApiConfig
     {

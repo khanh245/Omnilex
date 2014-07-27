@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using Omnilex_Website.Models;
+using OmnilexWebsite.Models;
 
-namespace Omnilex_Website.Controllers
+namespace OmnilexWebsite.Controllers
 {
     [Authorize]
     public class AccountController : Controller

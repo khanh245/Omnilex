@@ -1,8 +1,8 @@
 using System.Web.Optimization;
 
-[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(Omnilex_Website.App_Start.TypeaheadBundleConfig), "RegisterBundles")]
+[assembly: WebActivatorEx.PostApplicationStartMethod(typeof(OmnilexWebsite.App_Start.TypeaheadBundleConfig), "RegisterBundles")]
 
-namespace Omnilex_Website.App_Start
+namespace OmnilexWebsite.App_Start
 {
 	public class TypeaheadBundleConfig
 	{

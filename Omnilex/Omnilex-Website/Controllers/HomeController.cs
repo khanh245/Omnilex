@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Omnilex_Website.Controllers
+namespace OmnilexWebsite.Controllers
 {
     public class HomeController : Controller
     {
