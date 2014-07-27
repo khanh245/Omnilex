@@ -11,8 +11,9 @@ namespace OmnilexService
     // NOTE: In order to launch WCF Test Client for testing this service, please select OmnilexService.svc or OmnilexService.svc.cs at the Solution Explorer and start debugging.
     public class OmnilexService : IOmnilexService
     {
-        public void DoWork()
+        public string DoWork()
         {
+            return "Testing...";
         }
     }
 }

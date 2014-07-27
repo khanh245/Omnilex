@@ -12,6 +12,6 @@ namespace OmnilexService
     public interface IOmnilexService
     {
         [OperationContract]
-        void DoWork();
+        string DoWork();
     }
 }
