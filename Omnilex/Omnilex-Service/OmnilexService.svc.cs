@@ -14,6 +14,7 @@ namespace OmnilexService
         public IList<string> GetString()
         {
             IList<string> list = new List<string> ( ) { "Hello", "Test", "World" };
+
             return list;
         }
     }

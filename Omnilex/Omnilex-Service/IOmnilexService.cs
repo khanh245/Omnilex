@@ -12,7 +12,7 @@ namespace OmnilexService
     public interface IOmnilexService
     {
         [OperationContract]
-        [WebGet(ResponseFormat=WebMessageFormat.Json)]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped, UriTemplate = "json/")]
         IList<string> GetString();
     }
 }
