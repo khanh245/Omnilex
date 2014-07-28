@@ -3,7 +3,7 @@
   <Role name="Omnilex-Service">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=omnilexstorage;AccountKey=78+MZ0U6+4XDG6NmiAVEVepXFvD9IRUPWVyU/wY/rdMdK+ySG1YuxVE8MBWbO3PqsxELu4OlfT+WtBtv3C+Iew==" />
     </ConfigurationSettings>
     <Certificates>
     </Certificates>
