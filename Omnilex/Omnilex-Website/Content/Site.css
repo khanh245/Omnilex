@@ -1,6 +1,9 @@
 ﻿/* Override body layout */
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: url('../resources/tree-of-knowledge.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 html, body, .container {
