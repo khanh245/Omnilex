@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
 namespace OmnilexService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IOmnilexService" in both code and config file together.
     [ServiceContract]
     public interface IOmnilexService
     {
         [OperationContract]
-        string DoWork();
+        [WebGet(ResponseFormat=WebMessageFormat.Json)]
+        IList<string> GetString();
     }
 }

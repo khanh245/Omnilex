@@ -9,12 +9,12 @@ using System.Text;
 namespace OmnilexService
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-
     public class OmnilexService : IOmnilexService
     {
-        public string DoWork()
+        public IList<string> GetString()
         {
-            return "Testing...";
+            IList<string> list = new List<string> ( ) { "Hello", "Test", "World" };
+            return list;
         }
     }
 }

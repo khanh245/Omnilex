@@ -5,13 +5,11 @@
       <Site name="Web">
         <Bindings>
           <Binding name="Endpoint1" endpointName="Endpoint1" />
-          <Binding name="Endpoint2" endpointName="SecuredEndpoint" />
         </Bindings>
       </Site>
     </Sites>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
-      <InputEndpoint name="SecuredEndpoint" protocol="https" port="8080" />
     </Endpoints>
     <Imports>
       <Import moduleName="Diagnostics" />
@@ -20,7 +18,6 @@
       <LocalStorage name="Omnilex-Service.svclog" sizeInMB="1000" cleanOnRoleRecycle="false" />
     </LocalResources>
     <Certificates>
-      <Certificate name="OmnilexCert" storeLocation="LocalMachine" storeName="CA" />
     </Certificates>
   </WebRole>
 </ServiceDefinition>
