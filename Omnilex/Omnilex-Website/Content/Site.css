@@ -24,12 +24,12 @@ html, body, .container {
 }
 
 /* Override navbar background */
-.navbar-default {
+navbar-default-omnilex {
     background-color: transparent;
     background: transparent;
 }
 
-    .navbar-default li {
+    navbar-default-omnilex li {
         color: #000;
     }
 
