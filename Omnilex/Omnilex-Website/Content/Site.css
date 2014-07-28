@@ -24,14 +24,18 @@ html, body, .container {
 }
 
 /* Override navbar background */
-navbar-default-omnilex {
+.navbar-default {
     background-color: transparent;
     background: transparent;
 }
 
-    navbar-default-omnilex li {
+    .navbar-default li{
         color: #000;
     }
+        
+        .navbar-default li :hover {
+            border-radius: 5px;
+        }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
