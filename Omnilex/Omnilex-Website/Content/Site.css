@@ -24,12 +24,12 @@ html, body, .container {
 }
 
 /* Override navbar background */
-.navbar {
+.navbar-default {
     background-color: transparent;
     background: transparent;
 }
 
-    .navbar li {
+    .navbar-default li {
         color: #000;
     }
 
