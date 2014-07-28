@@ -24,6 +24,7 @@ html, body, .container {
 .vertical-center-row {
     display: table-cell;
     vertical-align: middle;
+    float: none;
 }
 
 /* Override navbar background */
