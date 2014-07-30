@@ -11,9 +11,9 @@ namespace OmnilexService
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class OmnilexService : IOmnilexService
     {
-        public IList<string> GetString()
+        public List<string> GetString()
         {
-            IList<string> list = new List<string> ( ) { "Hello", "Test", "World" };
+            List<string> list = new List<string> ( ) { "Hello", "Test", "World" };
 
             return list;
         }
