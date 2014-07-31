@@ -12,7 +12,7 @@ namespace OmnilexService
     public interface IOmnilexService
     {
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "/TestService"]
+        [WebInvoke(Method = "GET", UriTemplate = "/TestService")]
         List<string> GetString();
     }
 }
