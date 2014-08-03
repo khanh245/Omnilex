@@ -56,6 +56,10 @@ textarea {
     border-color: #dcdcdc;
 }
 
+    .search-input:hover {
+        border-color: rgba(24, 114, 11, 0.3);
+    }
+
     .search-input:focus {
         border-color: rgba(24, 114, 11, 0.8);
         box-shadow: 0 4px 4px rgba(24, 114, 11, 0.075) inset, 0 0 8px rgba(24, 114, 11, 0.6);
