@@ -51,6 +51,9 @@ textarea {
 /* Main Search Input Box */
 .search-input {
     max-width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dcdcdc;
 }
 
     .search-input:focus {
