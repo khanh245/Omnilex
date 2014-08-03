@@ -9,7 +9,7 @@ using System.Text;
 namespace OmnilexService
 {
     [ServiceContract]
-    public interface IOmnilexService
+    public interface IDefinitionService
     {
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "/TestService")]

@@ -9,7 +9,7 @@ using System.Text;
 namespace OmnilexService
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class OmnilexService : IOmnilexService
+    public class ODefService : IDefinitionService
     {
         public List<string> GetString()
         {
