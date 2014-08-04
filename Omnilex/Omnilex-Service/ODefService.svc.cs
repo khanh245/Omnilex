@@ -11,11 +11,10 @@ namespace OmnilexService
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class ODefService : IDefinitionService
     {
-        public List<string> GetString()
+        public string GetString(string from, string to, string word)
         {
-            List<string> list = new List<string> ( ) { "Hello", "Test", "World" };
-
-            return list;
+            string result = "Some definition";
+            return result;
         }
     }
 }
