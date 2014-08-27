@@ -1,4 +1,4 @@
-﻿/****************************************************
+/****************************************************
 *                                                   *
 *   FILE:       Omnilex Database SQL SERVER QUERY   *
 *   AUTHOR:     Khanh Nguyen                        *
@@ -42,6 +42,24 @@ CREATE TABLE WordClasses (
 INSERT INTO WordClasses (ClassName) VALUES ('Noun');
 INSERT INTO WordClasses (ClassName) VALUES ('Adjective');
 INSERT INTO WordClasses (ClassName) VALUES ('Verb');
+
+/********************************************************************************
+                             LANGUAGE WORD RELATION
+*********************************************************************************/
+/* TODO: Work on this */
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_LangWordID')
+  ALTER TABLE LanguageWord DROP CONSTRAINT [PK_LangWordID];
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'FK_LangWordLanguageID')
+  ALTER TABLE LanguageWord DROP CONSTRAINT [FK_LangWordLanguageID];
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'FK_LangWordWordID')
+  ALTER TABLE LanguageWord DROP CONSTRAINT [FK_LangWordWordID];
+CREATE TABLE LanguageWord (
+  LanguageWord_ID	int IDENTITY (1,1),
+  Word_ID			int NOT NULL,
+  Language_ID		int NOT NULL,
+  CONSTRAINT [PK_LangWordID] PRIMARY KEY (LanguageWord_ID ASC),
+  CONSTRAINT [FK_LangWordLanguageID]
+);
 
 /********************************************************************************
                             LATIN ALPHABET RELATION
