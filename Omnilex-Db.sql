@@ -1,10 +1,11 @@
-﻿/**********************************************
-***********************************************
-***********************************************
-*** FILE: Omnilex Database SQL SERVER QUERY ***
-***********************************************
-***********************************************
-***********************************************/
+﻿/****************************************************
+*                                                   *
+*   FILE:       Omnilex Database SQL SERVER QUERY   *
+*   AUTHOR:     Khanh Nguyen                        *
+*   DATE:       08/26/2014                          *
+*   VERSION:    1.0                                 *
+*                                                   *
+*****************************************************/
 
 /********************************************************************************
         GENERAL PURPOSE SCRIPTS - SETTING UP ENVIRONMENT
@@ -23,6 +24,24 @@ GO
 
 USE [omnilex_db];
 GO
+
+/********************************************************************************
+                            WORD CLASSES RELATION
+*********************************************************************************/
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_WordClassID')
+  ALTER TABLE WordClasses DROP CONSTRAINT [PK_WordClassID];
+IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'WordClasses')
+  DROP TABLE WordClasses;
+CREATE TABLE WordClasses (
+  WordClass_ID  int IDENTITY(1,1),
+  ClassName     nvarchar(25),
+  CONSTRAINT [PK_WordClassID] PRIMARY KEY (WordClass_ID ASC),
+  CONSTRAINT [CHK_Class] CHECK (DATALENGTH(ClassName) > 0)
+);
+
+INSERT INTO WordClasses (ClassName) VALUES ('Noun');
+INSERT INTO WordClasses (ClassName) VALUES ('Adjective');
+INSERT INTO WordClasses (ClassName) VALUES ('Verb');
 
 /********************************************************************************
                             LATIN ALPHABET RELATION
