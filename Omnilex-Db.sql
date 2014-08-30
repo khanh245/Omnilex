@@ -44,21 +44,17 @@ INSERT INTO WordClasses (ClassName) VALUES ('Adjective');
 INSERT INTO WordClasses (ClassName) VALUES ('Verb');
 
 /********************************************************************************
-                             LANGUAGE WORD RELATION
+                            WORDS RELATION
 *********************************************************************************/
-/* TODO: Work on this */
-IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_LangWordID')
-  ALTER TABLE LanguageWord DROP CONSTRAINT [PK_LangWordID];
-IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'FK_LangWordLanguageID')
-  ALTER TABLE LanguageWord DROP CONSTRAINT [FK_LangWordLanguageID];
-IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'FK_LangWordWordID')
-  ALTER TABLE LanguageWord DROP CONSTRAINT [FK_LangWordWordID];
-CREATE TABLE LanguageWord (
-  LanguageWord_ID	int IDENTITY (1,1),
-  Word_ID			int NOT NULL,
-  Language_ID		int NOT NULL,
-  CONSTRAINT [PK_LangWordID] PRIMARY KEY (LanguageWord_ID ASC),
-  CONSTRAINT [FK_LangWordLanguageID]
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_WordID')
+  ALTER TABLE Words DROP CONSTRAINT [PK_WordID];
+IF EXISTS (SELECT * FROM information_schema.tables WHERE table_name = N'Words')
+  DROP TABLE Words;
+CREATE TABLE Words (
+  Word_ID  int IDENTITY(1,1),
+  Word     nvarchar(25),
+  CONSTRAINT [PK_WordID] PRIMARY KEY (Word_ID ASC),
+  CONSTRAINT [CHK_Word] CHECK (DATALENGTH(Word) > 0)
 );
 
 /********************************************************************************
@@ -212,3 +208,26 @@ INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (2, 1);
 INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (3, 1);
 INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (4, 2);
 INSERT INTO LanguageAlphabet (Lang_ID, Alphabet_ID) VALUES (5, 1);
+
+/********************************************************************************
+                             LANGUAGE WORD RELATION
+*********************************************************************************/
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'PK_LangWordID')
+  ALTER TABLE LanguageWord DROP CONSTRAINT [PK_LangWordID];
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'FK_LangWordLanguageID')
+  ALTER TABLE LanguageWord DROP CONSTRAINT [FK_LangWordLanguageID];
+IF EXISTS (SELECT * FROM sys.default_constraints WHERE name = N'FK_LangWordWordID')
+  ALTER TABLE LanguageWord DROP CONSTRAINT [FK_LangWordWordID];
+CREATE TABLE LanguageWord (
+  LanguageWord_ID	int IDENTITY (1,1),
+  Word_ID			int NOT NULL,
+  Language_ID		int NOT NULL,
+  CONSTRAINT [PK_LangWordID] PRIMARY KEY (LanguageWord_ID ASC),
+  CONSTRAINT [FK_LangWordWordID] FOREIGN KEY (Word_ID) REFERENCES Words (Word_ID) 
+    ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT [FK_LangWordLanguageID] FOREIGN KEY (Language_ID) REFERENCES Languages (Lang_ID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+/* INSERT INTO */
+
