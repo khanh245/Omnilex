@@ -33,10 +33,10 @@ html, body, .container {
     background: transparent;
 }
 
-    .navbar-default li{
+    .navbar-default li {
         color: #000;
     }
-        
+
         .navbar-default li :hover {
             border-radius: 5px;
         }
@@ -57,12 +57,18 @@ textarea {
 }
 
     .search-input:hover {
-        border-color: rgba(24, 114, 11, 0.3);
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-top-color: rgba(24, 114, 11, 0.3);
+        border-bottom-color: rgba(24, 114, 11, 0.3);
     }
 
     .search-input:focus {
-        border-color: rgba(24, 114, 11, 0.8);
-        box-shadow: 0 4px 4px rgba(24, 114, 11, 0.075) inset, 0 0 8px rgba(24, 114, 11, 0.6);
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-top-color: rgba(24, 114, 11, 0.8);
+        border-bottom-color: rgba(24, 114, 11, 0.8);
+        box-shadow: 0 4px 4px rgba(24, 114, 11, 0.075), 0 0 8px rgba(24, 114, 11, 0.6);
         outline: 0 none;
     }
 
