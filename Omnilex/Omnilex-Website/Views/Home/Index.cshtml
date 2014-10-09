@@ -23,6 +23,12 @@
                 </ul>
             </div>
 
+            <script>
+                $(".dropdown-menu li").click(function () {
+                    $(this).closest('.input-group-btn').children('button').text($(this).text())+' <span class="caret"></span>'
+                });
+            </script>
+
             <input type="text" class="form-control search-input" placeholder="Type a word..." autocomplete="off" name="q">
 
             <div class="input-group-btn">
