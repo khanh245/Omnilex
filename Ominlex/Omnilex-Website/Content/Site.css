@@ -1,0 +1,79 @@
+﻿/* Override body layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../resources/tree-of-knowledge.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.container {
+    display: table;
+    vertical-align: middle;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.main-container {
+    padding-top: 0px;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+/* Override navbar background */
+.navbar-default {
+    background-color: transparent;
+    background: transparent;
+}
+
+    .navbar-default li {
+        color: #000;
+    }
+
+        .navbar-default li :hover {
+            border-radius: 5px;
+        }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Main Search Input Box */
+.search-input {
+    max-width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dcdcdc;
+}
+
+    .search-input:hover {
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-top-color: rgba(24, 114, 11, 0.3);
+        border-bottom-color: rgba(24, 114, 11, 0.3);
+    }
+
+    .search-input:focus {
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-top-color: rgba(24, 114, 11, 0.8);
+        border-bottom-color: rgba(24, 114, 11, 0.8);
+        box-shadow: 0 4px 4px rgba(24, 114, 11, 0.075), 0 0 8px rgba(24, 114, 11, 0.6);
+        outline: 0 none;
+    }
+
+.btn-search {
+    width: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
