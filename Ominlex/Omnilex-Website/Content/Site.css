@@ -51,7 +51,7 @@ textarea {
 /* Main Search Input Box */
 .search-input {
     max-width: 100%;
-    border-width: 1px;
+    border-width: 0px;
     border-style: solid;
     border-color: #dcdcdc;
 }
@@ -59,16 +59,12 @@ textarea {
     .search-input:hover {
         border-left-width: 0px;
         border-right-width: 0px;
-        border-top-color: rgba(24, 114, 11, 0.3);
-        border-bottom-color: rgba(24, 114, 11, 0.3);
     }
 
     .search-input:focus {
         border-left-width: 0px;
         border-right-width: 0px;
-        border-top-color: rgba(24, 114, 11, 0.8);
-        border-bottom-color: rgba(24, 114, 11, 0.8);
-        box-shadow: 0 4px 4px rgba(24, 114, 11, 0.075), 0 0 8px rgba(24, 114, 11, 0.6);
+        box-shadow: 0 0px 0px rgba(24, 114, 11, 0.075), 0 0 0px rgba(24, 114, 11, 0.6);
         outline: 0 none;
     }
 
